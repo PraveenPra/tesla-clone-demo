@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
+import LanguageIcon from "@material-ui/icons/Language";
 import { selectCars } from "../features/car/carSlice";
 import { useSelector } from "react-redux";
 
@@ -24,7 +25,7 @@ function Header() {
       </Menu>
       <RightMenu>
         <a href="#">Shop</a>
-        <a href="#">Tesla Account</a>
+        <a href="#">Account</a>
         <CustomMenu onClick={() => setBurgerStatus(true)} />
       </RightMenu>
       <BurgerNav show={burgerStatus}>
@@ -42,17 +43,32 @@ function Header() {
           <a href="#">Existing inventory</a>
         </li>
         <li>
-          <a href="#">Trade in</a>
+          <a href="#">used inventory</a>
+        </li>
+        <li>
+          <a href="#">Trade-In</a>
+        </li>
+        <li>
+          <a href="#">Test Drive</a>
         </li>
         <li>
           <a href="#">Cybertruck</a>
         </li>
         <li>
-          <a href="#">used inventory</a>
+          <a href="#">Semi</a>
         </li>
-        
         <li>
-          <a href="#">solar systems</a>
+          <a href="#">Utilities</a>
+        </li>
+        <li>
+          <a href="#">Find Us</a>
+        </li>
+        <li>
+          <a href="#">Support</a>
+        </li>
+        <li><LanguageIcon/>
+          <a href="#">India</a>
+          <h6>English</h6>
         </li>
       </BurgerNav>
     </Container>
@@ -102,6 +118,7 @@ const CustomMenu = styled(MenuIcon)`
   cursor: pointer;
 `;
 const BurgerNav = styled.div`
+overflow: auto;
 position:fixed;
 background:white;
 top:0;
@@ -119,10 +136,24 @@ transition:transform 0.2s ;
 li{
     
     padding:15px 0;
-    border-bottom:1px solid grey;
+    // border-bottom:1px solid gray;
+    a{
+        color:gray;
+        font-weight:600;
+    }
+    a:hover{
+        color:black;
+    
+    }
+}
+li:hover{
+    // padding:20px 0;
+    background:rgba(0,0,0,0.1);
+    border-radius:10px;
     a{
         color:black;
-        font-weight:600;
+        padding:25px 10px;
+        font-size:1.2em;
     }
 }
 `;
