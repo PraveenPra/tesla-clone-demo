@@ -7,7 +7,7 @@ function Section({title,desc,leftButton,rightButton,bgImg}) {
     <Wrap bgImage={bgImg}>
       
       <ItemText>
-        <h1>{title}</h1>
+        <Title>{title}</Title>
         <p>{desc}</p>
       </ItemText>
       
@@ -41,8 +41,14 @@ const Wrap = styled.div`
   align-items: center;
 
 `;
+
+const Title = styled.h1`
+font-size:3em;
+font-weight:600;
+color:rgba(0,0,0,0.7)`
+
 const ItemText = styled.div`
-  padding-top: 15vh;
+  padding-top: 10vh;
   text-align: center;
 `;
 const ButtonGroup = styled.div`
