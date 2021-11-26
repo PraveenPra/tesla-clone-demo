@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
+
 function Section({title,desc,leftButton,rightButton,bgImg}) {
   return (
     <Wrap bgImage={bgImg}>
+      
       <ItemText>
         <h1>{title}</h1>
         <p>{desc}</p>
       </ItemText>
+      
 <div>
       <ButtonGroup>
         <LeftButton>{leftButton}</LeftButton>
@@ -25,6 +28,7 @@ function Section({title,desc,leftButton,rightButton,bgImg}) {
 export default Section;
 
 const Wrap = styled.div`
+
   width: 100%;
   height: 100vh;
   background-size: cover;
